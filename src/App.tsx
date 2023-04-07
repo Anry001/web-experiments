@@ -4,16 +4,6 @@ import ShitDataGrid from './components/ShitDataGrid';
 
 const App = () => {
   return (
-    <Stack
-      direction="row"
-      justifyContent="space-evenly"
-      alignItems="center"
-      spacing={2}
-    >
-      <ShitDataGrid />
-      <ShitDataGrid />
-      <ShitDataGrid />
-    </Stack>
   );
 };
 
