@@ -1,5 +1,10 @@
+import Box from '@mui/material/Box';
+import { Stack, Button } from '@mui/material';
+import ShitDataGrid from './components/ShitDataGrid';
+
 const App = () => {
-  return <h1>checking something</h1>;
+  return (
+  );
 };
 
 export default App;
