@@ -2,9 +2,9 @@ import { Stack, Button } from '@mui/material';
 import ShitDataGrid from '@components/ShitDataGrid';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
-  const HELLO_WORLD_BUTTON_TEXT = 'Click to go to hello world';
+const HELLO_WORLD_BUTTON_TEXT = 'Click to go to hello world';
 
+const Home = () => {
   return (
     <Stack>
       <Stack
