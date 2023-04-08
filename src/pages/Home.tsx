@@ -2,13 +2,12 @@ import { Stack, Button } from '@mui/material';
 import ShitDataGrid from '@components/ShitDataGrid';
 import { Link } from 'react-router-dom';
 
-const HELLO_WORLD_BUTTON_TEXT = 'Click to go to hello world';
+const ABOUT_BUTTON_TEXT = 'About';
 
 const Home = () => {
   return (
     <Stack>
       <Stack
-        sx={{ background: 'yellow' }}
         direction="row"
         justifyContent="space-evenly"
         alignItems="center"
@@ -26,7 +25,7 @@ const Home = () => {
         spacing={10}
       >
         <Link to="about" style={{ textDecoration: 'none' }}>
-          <Button variant="contained">{HELLO_WORLD_BUTTON_TEXT}</Button>
+          <Button variant="contained">{ABOUT_BUTTON_TEXT}</Button>
         </Link>
         <Button variant="contained">Click me</Button>
       </Stack>

@@ -6,7 +6,12 @@ const BACK_TO_HOME_BUTTON_TEXT = 'Home page';
 
 const About = () => {
   return (
-    <Stack>
+    <Stack
+      sx={{ height: '60vh', width: '100vw' }}
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+    >
       <Typography variant="h3" gutterBottom>
         Click the below button to go to the home page
       </Typography>
