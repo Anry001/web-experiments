@@ -12,12 +12,17 @@ const About = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Typography variant="h3" gutterBottom>
-        Click the below button to go to the home page
+      <Typography sx={{ mb: '70px' }} variant="h4" gutterBottom>
+        This is a project to go over the basics of web development.
       </Typography>
-      <Link to="/" style={{ textDecoration: 'none' }}>
-        <Button variant="contained">{BACK_TO_HOME_BUTTON_TEXT}</Button>
-      </Link>
+      <Stack direction="row" spacing={2}>
+        <Typography variant="h6">
+          Click the button to go to home page:
+        </Typography>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <Button variant="contained">{BACK_TO_HOME_BUTTON_TEXT}</Button>
+        </Link>
+      </Stack>
     </Stack>
   );
 };

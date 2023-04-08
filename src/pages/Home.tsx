@@ -3,6 +3,7 @@ import ShitDataGrid from '@components/ShitDataGrid';
 import { Link } from 'react-router-dom';
 
 const ABOUT_BUTTON_TEXT = 'About';
+const CONTACT_BUTTON_TEXT = 'Contact';
 
 const Home = () => {
   return (
@@ -27,7 +28,9 @@ const Home = () => {
         <Link to="about" style={{ textDecoration: 'none' }}>
           <Button variant="contained">{ABOUT_BUTTON_TEXT}</Button>
         </Link>
-        <Button variant="contained">Click me</Button>
+        <Link to="contact" style={{ textDecoration: 'none' }}>
+          <Button variant="contained">{CONTACT_BUTTON_TEXT}</Button>
+        </Link>
       </Stack>
     </Stack>
   );
