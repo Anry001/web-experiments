@@ -6,7 +6,7 @@ const routes = createBrowserRouter([
   { path: '/about', element: <h1>hello world</h1> },
 ]);
 
-const AppRoutes = () => {
+const Routes = () => {
   return <RouterProvider router={routes} />;
 };
-export default AppRoutes;
+export default Routes;
