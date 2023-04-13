@@ -32,6 +32,9 @@ const Home = () => {
           <Button variant="contained">{CONTACT_BUTTON_TEXT}</Button>
         </Link>
       </Stack>
+      <Stack sx={{ mt: '75px' }} alignItems="center">
+        <Button variant="contained">{ABOUT_BUTTON_TEXT}</Button>
+      </Stack>
     </Stack>
   );
 };
