@@ -11,7 +11,7 @@ const Contact = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Typography variant="h2" gutterBottom>
+      <Typography sx={{ fontWeight: 'bold' }} variant="h2" gutterBottom>
         contact info below:
       </Typography>
       <Typography variant="h5" gutterBottom>

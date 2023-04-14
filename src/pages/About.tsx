@@ -12,6 +12,9 @@ const About = () => {
       justifyContent="center"
       alignItems="center"
     >
+      <Typography sx={{ fontWeight: 'bold' }} variant="h1" gutterBottom>
+        About page:
+      </Typography>
       <Typography sx={{ mb: '70px' }} variant="h4" gutterBottom>
         This is a project to go over the basics of web development.
       </Typography>
