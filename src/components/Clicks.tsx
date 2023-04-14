@@ -1,21 +1,17 @@
+import { useButtonStore } from '@/store/button';
 import { Button, Stack, Typography } from '@mui/material';
-import { useState } from 'react';
 
 const ADD_CLICK = 'Add Click';
 
 const Clicks = () => {
-  const [clicks, setClicks] = useState(0);
-
-  const handleClick = () => {
-    setClicks(clicks + 1);
-  };
+  const { numberOfClicks, incrementNumberOfClicks } = useButtonStore();
 
   return (
     <Stack sx={{ mt: '25px' }} spacing={2} alignItems="center">
-      <Button onClick={handleClick} variant="contained">
+      <Button onClick={incrementNumberOfClicks} variant="contained">
         {ADD_CLICK}
       </Button>
-      <Typography variant="h4">Number of clicks: {clicks}</Typography>
+      <Typography variant="h4">Number of clicks: {numberOfClicks}</Typography>
     </Stack>
   );
 };

@@ -1,7 +1,7 @@
 import { Stack, Button, Typography } from '@mui/material';
 import ShitDataGrid from '@components/ShitDataGrid';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import Clicks from '@/components/Clicks';
 
 const ABOUT_BUTTON_TEXT = 'About';
 const CONTACT_BUTTON_TEXT = 'Contact';
@@ -33,6 +33,7 @@ const Home = () => {
           <Button variant="contained">{CONTACT_BUTTON_TEXT}</Button>
         </Link>
       </Stack>
+      <Clicks />
     </Stack>
   );
 };

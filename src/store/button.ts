@@ -1,11 +1,12 @@
 import { create } from 'zustand';
 
 interface ButtonState {
-  count: number;
-  increment: () => void;
+  numberOfClicks: number;
+  incrementNumberOfClicks: () => void;
 }
 
 export const useButtonStore = create<ButtonState>()((set) => ({
-  count: 0,
-  increment: () => set((state) => ({ count: state.count + 1 })),
+  numberOfClicks: 0,
+  incrementNumberOfClicks: () =>
+    set((state) => ({ numberOfClicks: state.numberOfClicks + 1 })),
 }));

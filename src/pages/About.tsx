@@ -1,4 +1,5 @@
-import { Button, Typography } from '@mui/material';
+import Clicks from '@/components/Clicks';
+import { Box, Button, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { Link } from 'react-router-dom';
 
@@ -26,6 +27,9 @@ const About = () => {
           <Button variant="contained">{BACK_TO_HOME_BUTTON_TEXT}</Button>
         </Link>
       </Stack>
+      <Box sx={{ mt: '100px' }}>
+        <Clicks />
+      </Box>
     </Stack>
   );
 };
