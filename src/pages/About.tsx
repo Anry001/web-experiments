@@ -8,7 +8,7 @@ const BACK_TO_HOME_BUTTON_TEXT = 'Home page';
 const About = () => {
   return (
     <Stack
-      sx={{ height: '60vh', width: '100vw' }}
+      sx={{ height: '60vh', width: '100vw', mt: '100px' }}
       direction="column"
       justifyContent="center"
       alignItems="center"
