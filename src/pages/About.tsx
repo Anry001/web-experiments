@@ -1,7 +1,7 @@
-import Clicks from '@/components/Clicks';
 import { Box, Button, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { Link } from 'react-router-dom';
+import ButtonClicks from '@/components/ButtonClicks';
 
 const BACK_TO_HOME_BUTTON_TEXT = 'Home page';
 
@@ -28,7 +28,7 @@ const About = () => {
         </Link>
       </Stack>
       <Box sx={{ mt: '100px' }}>
-        <Clicks />
+        <ButtonClicks />
       </Box>
     </Stack>
   );

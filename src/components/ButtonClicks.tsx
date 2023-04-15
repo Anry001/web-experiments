@@ -1,10 +1,10 @@
-import { useButtonStore } from '@/store/button';
+import { useButtonClicksStore } from '@/store/ButtonClicksStore';
 import { Button, Stack, Typography } from '@mui/material';
 
 const ADD_CLICK = 'Add Click';
 
-const Clicks = () => {
-  const { numberOfClicks, incrementNumberOfClicks } = useButtonStore();
+const ButtonClicks = () => {
+  const { numberOfClicks, incrementNumberOfClicks } = useButtonClicksStore();
 
   return (
     <Stack sx={{ mt: '25px' }} spacing={2} alignItems="center">
@@ -15,4 +15,4 @@ const Clicks = () => {
     </Stack>
   );
 };
-export default Clicks;
+export default ButtonClicks;

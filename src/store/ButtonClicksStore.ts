@@ -5,7 +5,7 @@ interface ButtonState {
   incrementNumberOfClicks: () => void;
 }
 
-export const useButtonStore = create<ButtonState>()((set) => ({
+export const useButtonClicksStore = create<ButtonState>()((set) => ({
   numberOfClicks: 0,
   incrementNumberOfClicks: () =>
     set((state) => ({ numberOfClicks: state.numberOfClicks + 1 })),

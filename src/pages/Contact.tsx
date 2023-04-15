@@ -1,6 +1,6 @@
-import Clicks from '@/components/Clicks';
 import { Box, Button, Stack, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
+import ButtonClicks from '@/components/ButtonClicks';
 
 const BACK_TO_HOME_BUTTON_TEXT = 'Home page';
 
@@ -28,7 +28,7 @@ const Contact = () => {
         <Button variant="contained">{BACK_TO_HOME_BUTTON_TEXT}</Button>
       </Link>
       <Box sx={{ mt: '50px' }}>
-        <Clicks />
+        <ButtonClicks />
       </Box>
     </Stack>
   );
