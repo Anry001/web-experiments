@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <Stack>
       <Stack
+        sx={{ mt: '40px' }}
         direction="row"
         justifyContent="space-evenly"
         alignItems="center"

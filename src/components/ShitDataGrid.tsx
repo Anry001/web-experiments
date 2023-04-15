@@ -16,7 +16,7 @@ const rows = [
 const ShitDataGrid = () => {
   return (
     <Stack
-      sx={{ height: '45vh', width: '45vw', mt: '40px' }}
+      sx={{ height: '45vh', width: '45vw' }}
       direction="column"
       justifyContent="center"
       alignItems="center"
