@@ -7,12 +7,6 @@ const columns: GridColDef[] = [
   { field: 'age', headerName: 'Age', width: 70 },
 ];
 
-const rows = [
-  { id: 2, name: 'anry', age: 23 },
-  { id: 3, name: 'lk', age: 50 },
-  { id: 4, name: 'kak', age: 2 },
-];
-
 const ShitDataGrid = () => {
   return (
     <Stack
