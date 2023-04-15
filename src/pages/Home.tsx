@@ -16,8 +16,6 @@ const Home = () => {
         spacing={2}
       >
         <ShitDataGrid />
-        <ShitDataGrid />
-        <ShitDataGrid />
       </Stack>
       <Stack
         sx={{ mt: '20px' }}

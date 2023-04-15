@@ -16,15 +16,14 @@ const rows = [
 const ShitDataGrid = () => {
   return (
     <Stack
-      sx={{ height: '45vh', width: '45vw' }}
+      sx={{ height: '45vh', width: '45vw', mt: '40px' }}
       direction="column"
       justifyContent="center"
       alignItems="center"
       spacing={2}
     >
-      <Button variant="contained">shit face</Button>
       <DataGrid
-        sx={{ width: '63%', height: '60%' }}
+        sx={{ width: '43%', height: '60%' }}
         rows={rows}
         columns={columns}
         pageSize={4}
