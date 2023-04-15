@@ -10,12 +10,15 @@ const Home = () => {
   return (
     <Stack>
       <Stack
-        sx={{ mt: '40px' }}
-        direction="row"
+        sx={{ height: '50vh', mt: '20px' }}
+        direction="column"
         justifyContent="space-evenly"
         alignItems="center"
         spacing={2}
       >
+        <Typography sx={{ fontWeight: 'bold' }} variant="h3" gutterBottom>
+          About page:
+        </Typography>
         <ShitDataGrid />
       </Stack>
       <Stack
