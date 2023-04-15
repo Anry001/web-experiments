@@ -1,4 +1,4 @@
-import { useButtonClicksStore } from '@/store/ButtonClicksStore';
+import { useButtonClicksStore } from '@store/buttonClicksStore';
 import { Button, Stack, Typography } from '@mui/material';
 
 const ADD_CLICK = 'Add Click';
