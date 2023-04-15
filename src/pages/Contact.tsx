@@ -1,5 +1,6 @@
-import { Button, Stack, Typography } from '@mui/material';
+import { Box, Button, Stack, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
+import ButtonClicks from '@/components/ButtonClicks';
 
 const BACK_TO_HOME_BUTTON_TEXT = 'Home page';
 
@@ -11,7 +12,7 @@ const Contact = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Typography variant="h2" gutterBottom>
+      <Typography sx={{ fontWeight: 'bold' }} variant="h2" gutterBottom>
         contact info below:
       </Typography>
       <Typography variant="h5" gutterBottom>
@@ -26,6 +27,9 @@ const Contact = () => {
       <Link to="/" style={{ textDecoration: 'none' }}>
         <Button variant="contained">{BACK_TO_HOME_BUTTON_TEXT}</Button>
       </Link>
+      <Box sx={{ mt: '50px' }}>
+        <ButtonClicks />
+      </Box>
     </Stack>
   );
 };
