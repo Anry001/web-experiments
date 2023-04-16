@@ -1,13 +1,16 @@
-import { Stack, Button } from '@mui/material';
+import { Stack } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import { useGetUsersQuerty, User } from '@/api/getUser';
 
-const columns: GridColDef[] = [
+const columns: GridColDef<User>[] = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'name', headerName: 'Name', width: 70 },
   { field: 'age', headerName: 'Age', width: 70 },
 ];
 
 const ShitDataGrid = () => {
+  const { data = [], isLoading } = useGetUsersQuerty();
+
   return (
     <Stack
       sx={{ height: '45vh', width: '45vw' }}
@@ -18,12 +21,13 @@ const ShitDataGrid = () => {
     >
       <DataGrid
         sx={{ width: '43%', height: '60%' }}
-        rows={rows}
+        rows={data}
         columns={columns}
         pageSize={4}
         checkboxSelection
         disableSelectionOnClick
         experimentalFeatures={{ newEditingApi: true }}
+        loading={isLoading}
       />
     </Stack>
   );

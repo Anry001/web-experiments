@@ -21,6 +21,7 @@
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
       "@store/*": ["./src/store/*"],
+      "@api/*": ["./src/api/*"],
     }
   },
   "include": ["src"],
