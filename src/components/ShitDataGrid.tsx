@@ -13,14 +13,14 @@ const ShitDataGrid = () => {
 
   return (
     <Stack
-      sx={{ height: '45vh', width: '45vw' }}
+      sx={{ height: '37vh', width: '20vw' }}
       direction="column"
       justifyContent="center"
       alignItems="center"
       spacing={2}
     >
       <DataGrid
-        sx={{ width: '43%', height: '60%' }}
+        sx={{ width: '100%', height: '100%' }}
         rows={data ?? []}
         columns={columns}
         pageSize={4}

@@ -27,9 +27,11 @@ const About = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Link to="/" style={{ textDecoration: 'none' }}>
-          <Button variant="contained">{BACK_TO_HOME_BUTTON_TEXT}</Button>
-        </Link>
+        <Box sx={{ mb: '20px' }}>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <Button variant="contained">{BACK_TO_HOME_BUTTON_TEXT}</Button>
+          </Link>
+        </Box>
         <ButtonClicks />
       </Stack>
     </Stack>
