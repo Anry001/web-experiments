@@ -1,6 +1,6 @@
 import { Stack } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { useGetUsersQuery } from '@/api/getUser';
+import { useGetUsersQuery } from '@/api/getUsers';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 70 },
