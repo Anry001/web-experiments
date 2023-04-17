@@ -1,15 +1,15 @@
 import { Stack } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { useGetUsersQuerty, User } from '@/api/getUser';
+import { useGetUsersQuery } from '@/api/getUser';
 
-const columns: GridColDef<User>[] = [
+const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'name', headerName: 'Name', width: 70 },
   { field: 'age', headerName: 'Age', width: 70 },
 ];
 
 const ShitDataGrid = () => {
-  const { data = [], isLoading } = useGetUsersQuerty();
+  const { data, isLoading } = useGetUsersQuery();
 
   return (
     <Stack
@@ -21,7 +21,7 @@ const ShitDataGrid = () => {
     >
       <DataGrid
         sx={{ width: '43%', height: '60%' }}
-        rows={data}
+        rows={data ?? []}
         columns={columns}
         pageSize={4}
         checkboxSelection
