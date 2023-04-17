@@ -12,12 +12,12 @@ const FULL_NAME_TEXT = 'name: john doe';
 const Contact = () => {
   return (
     <Stack
-      sx={{ height: '60vh', width: '100vw' }}
       direction="column"
       justifyContent="center"
       alignItems="center"
+      spacing={2}
     >
-      <Typography sx={{ fontWeight: 'bold' }} variant="h2" gutterBottom>
+      <Typography sx={{ fontWeight: 'bold' }} variant="h2">
         {CONTACT_INFO_TEXT}
       </Typography>
       <Typography variant="h5" gutterBottom>

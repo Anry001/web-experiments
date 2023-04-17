@@ -9,19 +9,11 @@ const CONTACT_BUTTON_TEXT = 'Contact';
 
 const Home = () => {
   return (
-    <Stack>
-      <Stack
-        sx={{ height: '50vh', mt: '20px' }}
-        direction="column"
-        justifyContent="space-evenly"
-        alignItems="center"
-        spacing={2}
-      >
-        <Typography sx={{ fontWeight: 'bold' }} variant="h3" gutterBottom>
-          {HOME_TEXT}
-        </Typography>
-        <ShitDataGrid />
-      </Stack>
+    <Stack direction="column" justifyContent="space-evenly" alignItems="center">
+      <Typography sx={{ fontWeight: 'bold' }} variant="h3" gutterBottom>
+        {HOME_TEXT}
+      </Typography>
+      <ShitDataGrid />
       <Stack
         sx={{ mt: '20px' }}
         direction="row"
