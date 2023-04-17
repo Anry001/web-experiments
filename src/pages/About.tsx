@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 import ButtonClicks from '@/components/ButtonClicks';
 import ShitDataGrid from '@/components/ShitDataGrid';
 
+const ABOUT_PAGE_TITLE = 'About page:';
 const BACK_TO_HOME_BUTTON_TEXT = 'Home page';
+const ABOUT_PAGE_TEXT =
+  'This is a project to go over the basics of web development.';
 
 const About = () => {
   return (
@@ -15,12 +18,14 @@ const About = () => {
       alignItems="center"
     >
       <Typography sx={{ fontWeight: 'bold' }} variant="h1" gutterBottom>
-        About page:
+        {ABOUT_PAGE_TITLE}
       </Typography>
       <Typography sx={{ mb: '20px' }} variant="h4">
-        This is a project to go over the basics of web development.
+        {ABOUT_PAGE_TEXT}
       </Typography>
-      <ShitDataGrid />
+      <Box>
+        <ShitDataGrid />
+      </Box>
       <Stack
         sx={{ mt: '20px' }}
         direction="column"
