@@ -1,6 +1,7 @@
-import { Stack, Typography } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useGetUsersQuery } from '@/api/getUsers';
+import AddUser from './AddUser';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 70 },
@@ -17,7 +18,7 @@ const ShitDataGrid = () => {
       direction="row"
       justifyContent="center"
       alignItems="center"
-      spacing={5}
+      spacing={4}
     >
       <DataGrid
         rows={data ?? []}
@@ -28,11 +29,9 @@ const ShitDataGrid = () => {
         experimentalFeatures={{ newEditingApi: true }}
         loading={isLoading}
       />
-      <Stack sx={{}}>
-        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-          Add new user
-        </Typography>
-      </Stack>
+      <Box sx={{ pb: '200px' }}>
+        <AddUser />
+      </Box>
     </Stack>
   );
 };
