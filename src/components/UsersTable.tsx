@@ -18,7 +18,7 @@ const ShitDataGrid = () => {
       direction="row"
       justifyContent="center"
       alignItems="center"
-      spacing={2}
+      spacing={4}
     >
       <DataGrid
         rows={data ?? []}
@@ -29,7 +29,9 @@ const ShitDataGrid = () => {
         experimentalFeatures={{ newEditingApi: true }}
         loading={isLoading}
       />
-      <AddUser />
+      <Box sx={{ pb: '90px' }}>
+        <AddUser />
+      </Box>
     </Stack>
   );
 };
