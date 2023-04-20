@@ -1,5 +1,5 @@
 import { Stack, Button, Typography, Box } from '@mui/material';
-import ShitDataGrid from '@components/ShitDataGrid';
+import UsersTable from '@/components/UsersTable';
 import { Link } from 'react-router-dom';
 import ButtonClicks from '@/components/ButtonClicks';
 
@@ -9,11 +9,18 @@ const CONTACT_BUTTON_TEXT = 'Contact';
 
 const Home = () => {
   return (
-    <Stack direction="column" justifyContent="space-evenly" alignItems="center">
+    <Stack
+      sx={{ height: '80vh', width: '100vw' }}
+      direction="column"
+      justifyContent="space-evenly"
+      alignItems="center"
+    >
       <Typography sx={{ fontWeight: 'bold' }} variant="h3" gutterBottom>
         {HOME_TEXT}
       </Typography>
-      <ShitDataGrid />
+      <Box sx={{ height: '50%', width: '30%' }}>
+        <UsersTable />
+      </Box>
       <Stack
         sx={{ mt: '20px' }}
         direction="row"

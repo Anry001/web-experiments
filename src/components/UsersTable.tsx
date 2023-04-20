@@ -1,4 +1,4 @@
-import { Stack } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useGetUsersQuery } from '@/api/getUsers';
 
@@ -13,14 +13,13 @@ const ShitDataGrid = () => {
 
   return (
     <Stack
-      sx={{ height: '45vh', width: '20vw' }}
-      direction="column"
+      sx={{ height: '100%', width: '100%' }}
+      direction="row"
       justifyContent="center"
       alignItems="center"
-      spacing={2}
+      spacing={5}
     >
       <DataGrid
-        sx={{ height: '100%', width: '100%' }}
         rows={data ?? []}
         columns={columns}
         pageSize={4}
@@ -29,6 +28,11 @@ const ShitDataGrid = () => {
         experimentalFeatures={{ newEditingApi: true }}
         loading={isLoading}
       />
+      <Stack sx={{}}>
+        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+          Add new user
+        </Typography>
+      </Stack>
     </Stack>
   );
 };

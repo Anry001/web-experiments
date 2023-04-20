@@ -1,7 +1,7 @@
 import { Box, Button, Stack, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import ButtonClicks from '@/components/ButtonClicks';
-import ShitDataGrid from '@/components/ShitDataGrid';
+import ShitDataGrid from '@/components/UsersTable';
 
 const BACK_TO_HOME_BUTTON_TEXT = 'Home page';
 const CONTACT_INFO_TEXT = 'contact info below:';
