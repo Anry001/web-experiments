@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-export interface User {
+interface User {
   id: number;
   name: string;
   age: number;

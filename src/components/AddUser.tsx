@@ -1,4 +1,6 @@
-import { Stack, TextField, Typography } from '@mui/material';
+import { Button, Stack, TextField, Typography } from '@mui/material';
+
+const ADD_USER_BUTTON_TEXT = 'Add user';
 
 const AddUser = () => {
   return (
@@ -6,7 +8,7 @@ const AddUser = () => {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      spacing={3}
+      spacing={2}
     >
       <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
         Add new user:
@@ -14,6 +16,7 @@ const AddUser = () => {
       <TextField id="outlined-basic" label="ID" variant="outlined" />
       <TextField id="outlined-basic" label="User Name" variant="outlined" />
       <TextField id="outlined-basic" label="Age" variant="outlined" />
+      <Button variant="contained">{ADD_USER_BUTTON_TEXT}</Button>
     </Stack>
   );
 };
