@@ -1,3 +1,9 @@
+export interface User {
+  id: number;
+  name: string;
+  age: number;
+}
+
 export const users = [
   { id: 2, name: 'kaka', age: 23 },
   { id: 3, name: 'lk', age: 50 },

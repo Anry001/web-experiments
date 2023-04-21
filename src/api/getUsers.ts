@@ -1,11 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { users } from './data';
-
-interface User {
-  id: number;
-  name: string;
-  age: number;
-}
+import { User, users } from './data';
 
 const getUsers = (): Promise<User[]> => {
   return new Promise<User[]>((resolve, reject) => {
