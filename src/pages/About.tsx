@@ -23,7 +23,7 @@ const About = () => {
       <Typography sx={{ mb: '20px' }} variant="h4">
         {ABOUT_PAGE_TEXT}
       </Typography>
-      <Box sx={{ height: '50%', width: '34%' }}>
+      <Box sx={{ height: '50%', width: '35%' }}>
         <UsersTable />
       </Box>
       <Stack
