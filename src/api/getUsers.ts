@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { User, users } from './data';
+import { User, users } from '@data/data';
 
 const getUsers = async (): Promise<User[]> => {
   return users;
