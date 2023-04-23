@@ -1,22 +1,26 @@
-import { Stack, Button, Typography } from '@mui/material';
-import ShitDataGrid from '@components/ShitDataGrid';
+import { Stack, Button, Typography, Box } from '@mui/material';
+import UsersTable from '@/components/UsersTable';
 import { Link } from 'react-router-dom';
 import ButtonClicks from '@/components/ButtonClicks';
 
+const HOME_TEXT = 'Home page';
 const ABOUT_BUTTON_TEXT = 'About';
 const CONTACT_BUTTON_TEXT = 'Contact';
 
 const Home = () => {
   return (
-    <Stack>
-      <Stack
-        direction="row"
-        justifyContent="space-evenly"
-        alignItems="center"
-        spacing={2}
-      >
-        <ShitDataGrid />
-      </Stack>
+    <Stack
+      sx={{ height: '80vh', width: '100vw' }}
+      direction="column"
+      justifyContent="space-evenly"
+      alignItems="center"
+    >
+      <Typography sx={{ fontWeight: 'bold' }} variant="h3" gutterBottom>
+        {HOME_TEXT}
+      </Typography>
+      <Box sx={{ height: '50%', width: '30%' }}>
+        <UsersTable />
+      </Box>
       <Stack
         sx={{ mt: '20px' }}
         direction="row"
@@ -31,7 +35,9 @@ const Home = () => {
           <Button variant="contained">{CONTACT_BUTTON_TEXT}</Button>
         </Link>
       </Stack>
-      <ButtonClicks />
+      <Box sx={{ mt: '40px' }}>
+        <ButtonClicks />
+      </Box>
     </Stack>
   );
 };
