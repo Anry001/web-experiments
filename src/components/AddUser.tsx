@@ -1,17 +1,28 @@
 import { Button, Stack, TextField, Typography } from '@mui/material';
 import { useState } from 'react';
-import { User } from '@data/data';
+import {
+  QueryClient,
+  useMutation,
+  UseMutateFunction,
+} from '@tanstack/react-query';
+import { createUser } from '@/api/createUser';
 
 const ADD_USER_BUTTON_TEXT = 'Add user';
 
-const AddUser = () => {
-  const [id, setId] = useState(String || Number);
+interface props {
+  addUser: (user: any) => void;
+}
+
+const AddUser = ({ addUser }: props) => {
+  const [id, setId] = useState('');
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
-  const newUser: User = { id: id, name: name, age: age };
+  // const { mutate } = useMutation(createUser);
 
-  console.log(newUser);
+  const handleClick = () => {
+    addUser({ id, name, age });
+  };
 
   return (
     <Stack
@@ -42,7 +53,9 @@ const AddUser = () => {
         label="Age"
         variant="outlined"
       />
-      <Button variant="contained">{ADD_USER_BUTTON_TEXT}</Button>
+      <Button onClick={handleClick} variant="contained">
+        {ADD_USER_BUTTON_TEXT}
+      </Button>
     </Stack>
   );
 };
