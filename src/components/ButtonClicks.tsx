@@ -7,7 +7,7 @@ const ButtonClicks = () => {
   const { numberOfClicks, incrementNumberOfClicks } = useButtonClicksStore();
 
   return (
-    <Stack sx={{ mt: '25px' }} spacing={2} alignItems="center">
+    <Stack spacing={2} alignItems="center">
       <Button onClick={incrementNumberOfClicks} variant="contained">
         {ADD_CLICK}
       </Button>
