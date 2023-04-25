@@ -18,11 +18,13 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@api/*": ["./src/api/*"],
+      "@app-routes": ["./src/app-routes/*"],
+      "@axios": ["./src/axios/*"],
       "@components/*": ["./src/components/*"],
+      "@data/*": ["./src/data/*"],
       "@pages/*": ["./src/pages/*"],
       "@store/*": ["./src/store/*"],
-      "@api/*": ["./src/api/*"],
-      "@data/*": ["./src/data/*"]
     }
   },
   "include": ["src"],
