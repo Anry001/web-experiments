@@ -1,36 +1,15 @@
+import { useAddUserMutation } from '@/api/addUser';
 import { Button, Stack, TextField, Typography } from '@mui/material';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import axios from 'axios';
 import { useState } from 'react';
 
 const ADD_USER_BUTTON_TEXT = 'Add user';
-
-interface User {
-  id: string;
-  name: string;
-  age: string;
-}
-
-const API_URL = 'http://localhost:3000';
-
-const createUser = async (user: User) => {
-  const { data } = await axios.post(`${API_URL}/users`, user);
-  return data;
-};
 
 const AddUser = () => {
   const [id, setId] = useState('');
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
-  const queryClient = useQueryClient();
-
-  const { mutate } = useMutation({
-    mutationFn: createUser,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['users'] });
-    },
-  });
+  const { mutate } = useAddUserMutation();
 
   const handleClick = () => {
     mutate({ id, name, age });
