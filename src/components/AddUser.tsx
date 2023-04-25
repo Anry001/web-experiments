@@ -1,27 +1,25 @@
 import { Button, Stack, TextField, Typography } from '@mui/material';
 import { useState } from 'react';
-import {
-  QueryClient,
-  useMutation,
-  UseMutateFunction,
-} from '@tanstack/react-query';
-import { createUser } from '@/api/createUser';
 
 const ADD_USER_BUTTON_TEXT = 'Add user';
 
-interface props {
-  addUser: (user: any) => void;
+interface User {
+  id: string;
+  name: string;
+  age: string;
 }
 
-const AddUser = ({ addUser }: props) => {
+const createUser = async (user: User): Promise<User> => {};
+
+const AddUser = () => {
   const [id, setId] = useState('');
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
-  // const { mutate } = useMutation(createUser);
+  const { mutate } = useMutation(createUser);
 
   const handleClick = () => {
-    addUser({ id, name, age });
+    mutate({ id, name, age });
   };
 
   return (
