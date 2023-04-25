@@ -1,4 +1,6 @@
 import { Button, Stack, TextField, Typography } from '@mui/material';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import axios from 'axios';
 import { useState } from 'react';
 
 const ADD_USER_BUTTON_TEXT = 'Add user';
@@ -9,8 +11,11 @@ interface User {
   age: string;
 }
 
-const createUser = async (user: User): Promise<User> => {
-  const respone = await 
+const API_URL = 'http://localhost:3000';
+
+const createUser = async (user: User) => {
+  const { data } = await axios.post(`${API_URL}/users`, user);
+  return data;
 };
 
 const AddUser = () => {
@@ -18,7 +23,14 @@ const AddUser = () => {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
-  const { mutate } = useMutation(createUser);
+  const queryClient = useQueryClient();
+
+  const { mutate } = useMutation({
+    mutationFn: createUser,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['users'] });
+    },
+  });
 
   const handleClick = () => {
     mutate({ id, name, age });
@@ -46,7 +58,6 @@ const AddUser = () => {
         label="User Name"
         variant="outlined"
       />
-
       <TextField
         onChange={(event) => setAge(event.target.value)}
         id="outlined-basic"
