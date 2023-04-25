@@ -1,11 +1,12 @@
 import { useGetUsersQuery } from '@/api/getUsers';
 import { Stack } from '@mui/material';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import AddUser from './AddUser';
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'name', headerName: 'Name', width: 70 },
-  { field: 'age', headerName: 'Age', width: 70 },
+  { field: 'id', headerName: 'ID', width: 100 },
+  { field: 'name', headerName: 'Name', width: 100 },
+  { field: 'age', headerName: 'Age', width: 100 },
 ];
 
 const ShitDataGrid = () => {
@@ -28,7 +29,7 @@ const ShitDataGrid = () => {
         experimentalFeatures={{ newEditingApi: true }}
         loading={isLoading}
       />
-      {/* <AddUser /> */}
+      <AddUser />
     </Stack>
   );
 };
