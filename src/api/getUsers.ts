@@ -1,10 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
-import { User, users } from '@data/data';
+import { User } from '@data/data';
+import axios from 'axios';
 
-export const getUsers = async (): Promise<User[]> => {
-  return users;
+const API_URL = 'http://localhost:3000';
+
+export const getUsers = async () => {
+  const { data } = await axios.get<User[]>(`${API_URL}/users`);
+  return data;
 };
 
-// export const useGetUsersQuery = () => {
-//   return useQuery({ queryKey: ['users'], queryFn: getUsers });
-// };
+export const useGetUsersQuery = () => {
+  return useQuery({ queryKey: ['users'], queryFn: getUsers });
+};
