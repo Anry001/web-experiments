@@ -15,7 +15,7 @@ export const useAddUserMutation = () => {
     mutationFn: createUser,
     onSuccess: (user) => {
       console.log('successfully added user: ', user);
-      queryClient.invalidateQueries({ queryKey: ['todos'] });
+      queryClient.invalidateQueries({ queryKey: ['users'] });
     },
   });
 };
