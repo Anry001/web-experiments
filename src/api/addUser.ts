@@ -3,7 +3,6 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 
 const API_URL = 'http://localhost:3000';
-const queryClient = useQueryClient();
 
 const createUser = async (user: User) => {
   const { data } = await axios.post(`${API_URL}/users`, user);
@@ -11,6 +10,7 @@ const createUser = async (user: User) => {
 };
 
 export const useAddUserMutation = () => {
+  const queryClient = useQueryClient();
   return useMutation({
     mutationFn: createUser,
     onSuccess: (user) => {
