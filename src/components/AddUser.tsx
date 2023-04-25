@@ -9,7 +9,9 @@ interface User {
   age: string;
 }
 
-const createUser = async (user: User): Promise<User> => {};
+const createUser = async (user: User): Promise<User> => {
+  const respone = await 
+};
 
 const AddUser = () => {
   const [id, setId] = useState('');
