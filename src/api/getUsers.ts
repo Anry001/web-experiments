@@ -10,5 +10,11 @@ export const getUsers = async () => {
 };
 
 export const useGetUsersQuery = () => {
-  return useQuery({ queryKey: ['users'], queryFn: getUsers });
+  return useQuery({
+    queryKey: ['users'],
+    queryFn: getUsers,
+    onSuccess(data) {
+      console.log('successfully fetched users: ', data);
+    },
+  });
 };
