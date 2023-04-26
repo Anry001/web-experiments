@@ -1,27 +1,18 @@
+import { useAddUserMutation } from '@api/addUser';
 import { Button, Stack, TextField, Typography } from '@mui/material';
 import { useState } from 'react';
-import {
-  QueryClient,
-  useMutation,
-  UseMutateFunction,
-} from '@tanstack/react-query';
-import { createUser } from '@/api/createUser';
 
 const ADD_USER_BUTTON_TEXT = 'Add user';
 
-interface props {
-  addUser: (user: any) => void;
-}
-
-const AddUser = ({ addUser }: props) => {
+const AddUser = () => {
   const [id, setId] = useState('');
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
-  // const { mutate } = useMutation(createUser);
+  const { mutate } = useAddUserMutation();
 
   const handleClick = () => {
-    addUser({ id, name, age });
+    mutate({ id, name, age });
   };
 
   return (
@@ -46,7 +37,6 @@ const AddUser = ({ addUser }: props) => {
         label="User Name"
         variant="outlined"
       />
-
       <TextField
         onChange={(event) => setAge(event.target.value)}
         id="outlined-basic"

@@ -1,8 +1,8 @@
 import { Box, Button, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { Link } from 'react-router-dom';
-import ButtonClicks from '@/components/ButtonClicks';
-import UsersTable from '@/components/UsersTable';
+import ButtonClicks from '@components/ButtonClicks';
+import UsersTable from '@components/UsersTable';
 
 const ABOUT_PAGE_TITLE = 'About page:';
 const BACK_TO_HOME_BUTTON_TEXT = 'Home page';
@@ -23,7 +23,7 @@ const About = () => {
       <Typography sx={{ mb: '20px' }} variant="h4">
         {ABOUT_PAGE_TEXT}
       </Typography>
-      <Box sx={{ height: '50%', width: '35%' }}>
+      <Box sx={{ height: '50%', width: '40%' }}>
         <UsersTable />
       </Box>
       <Stack
