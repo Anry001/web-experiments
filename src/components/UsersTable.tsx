@@ -6,7 +6,7 @@ import AddUser from '@components/AddUser';
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 100 },
   { field: 'name', headerName: 'Name', width: 100 },
-  { field: 'age', headerName: 'Age', width: 100 },
+  { field: 'age', headerName: 'Age', width: 50 },
 ];
 
 const ShitDataGrid = () => {
