@@ -1,8 +1,8 @@
 import { Box, Button, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { Link } from 'react-router-dom';
-import ButtonClicks from '@/components/ButtonClicks';
-import UsersTable from '@/components/UsersTable';
+import ButtonClicks from '@components/ButtonClicks';
+import UsersTable from '@components/UsersTable';
 
 const ABOUT_PAGE_TITLE = 'About page:';
 const BACK_TO_HOME_BUTTON_TEXT = 'Home page';

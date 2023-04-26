@@ -1,6 +1,6 @@
-import { User } from '@/data/data';
+import { User } from '@data/data';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import axios from 'axios';
+import axios from '@axios/axios';
 
 const API_URL = 'http://localhost:3000';
 

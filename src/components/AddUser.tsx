@@ -1,4 +1,4 @@
-import { useAddUserMutation } from '@/api/addUser';
+import { useAddUserMutation } from '@api/addUser';
 import { Button, Stack, TextField, Typography } from '@mui/material';
 import { useState } from 'react';
 

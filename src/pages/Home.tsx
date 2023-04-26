@@ -1,7 +1,7 @@
 import { Stack, Button, Typography, Box } from '@mui/material';
-import UsersTable from '@/components/UsersTable';
+import UsersTable from '@components/UsersTable';
 import { Link } from 'react-router-dom';
-import ButtonClicks from '@/components/ButtonClicks';
+import ButtonClicks from '@components/ButtonClicks';
 
 const HOME_TEXT = 'Home page';
 const ABOUT_BUTTON_TEXT = 'About';

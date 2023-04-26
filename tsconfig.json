@@ -17,10 +17,10 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      "@*": ["./src/*"],
       "@api/*": ["./src/api/*"],
-      "@app-routes": ["./src/app-routes/*"],
-      "@axios": ["./src/axios/*"],
+      "@app-routes/*": ["./src/app-routes/*"],
+      "@axios/*": ["./src/axios/*"],
       "@components/*": ["./src/components/*"],
       "@data/*": ["./src/data/*"],
       "@pages/*": ["./src/pages/*"],
