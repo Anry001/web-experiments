@@ -5,8 +5,8 @@ import AddUser from '@components/AddUser';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 100 },
-  { field: 'name', headerName: 'Name', width: 100 },
-  { field: 'age', headerName: 'Age', width: 50 },
+  { field: 'name', headerName: 'Name', width: 100, editable: true },
+  { field: 'age', headerName: 'Age', width: 50, editable: true },
 ];
 
 const ShitDataGrid = () => {
@@ -25,9 +25,8 @@ const ShitDataGrid = () => {
         columns={columns}
         pageSize={4}
         checkboxSelection
-        disableSelectionOnClick
-        experimentalFeatures={{ newEditingApi: true }}
         loading={isLoading}
+        disableSelectionOnClick
       />
       <AddUser />
     </Stack>
