@@ -1,5 +1,9 @@
 import { User } from '@data/data';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import {
+  useMutation,
+  useQueryClient,
+  UseMutationOptions,
+} from '@tanstack/react-query';
 import axios from '@axios/axios';
 
 const API_URL = 'http://localhost:3000';
@@ -9,13 +13,12 @@ const createUser = async (user: User) => {
   return data;
 };
 
-export const useAddUserMutation = () => {
+export const useAddUserMutation = (
+  config?: UseMutationOptions<User, Error, User>,
+) => {
   const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: createUser,
-    onSuccess: (user) => {
-      console.log('successfully added user: ', user);
-      queryClient.invalidateQueries({ queryKey: ['users'] });
-    },
+
+  return useMutation(createUser, {
+    ...config,
   });
 };

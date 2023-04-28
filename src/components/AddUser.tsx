@@ -1,29 +1,43 @@
 import { useAddUserMutation } from '@api/addUser';
+import { User } from '@data/data';
 import { Button, Stack, TextField, Typography } from '@mui/material';
+import { useQueryClient } from '@tanstack/react-query';
 import { useForm } from 'react-hook-form';
 
 const ADD_USER_BUTTON_TEXT = 'Add user';
+const ADD_USER_TITLE = 'Add new user';
 
-interface userFormData {
+interface UserFormData {
   id: string;
   name: string;
   age: string;
 }
+
+const mutationConfig = () => {
+  const queryClient = useQueryClient();
+
+  return {
+    onSuccess: (data: User) => {
+      console.log('User created:', data);
+      queryClient.invalidateQueries(['users']);
+    },
+  };
+};
 
 const AddUser = () => {
   const {
     register,
     handleSubmit,
     formState: { errors: error },
-  } = useForm<userFormData>();
+  } = useForm<UserFormData>();
 
-  console.log(error);
+  const { mutate } = useAddUserMutation(mutationConfig());
 
-  const { mutate } = useAddUserMutation();
-
-  const onSubmit = ({ id, name, age }: userFormData) => {
+  const onSubmit = ({ id, name, age }: UserFormData) => {
     mutate({ id, name, age });
   };
+
+  console.log('this is error msg', error);
 
   return (
     <Stack
@@ -35,7 +49,7 @@ const AddUser = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-        Add new user:
+        {ADD_USER_TITLE}
       </Typography>
       <TextField
         id="outlined-basic"
