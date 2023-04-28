@@ -37,7 +37,7 @@ const AddUser = () => {
     mutate({ id, name, age });
   };
 
-  console.log('this is error msg', error);
+  // console.log('form errores:', error);
 
   return (
     <Stack
@@ -57,8 +57,13 @@ const AddUser = () => {
         variant="outlined"
         {...register('id', {
           required: { value: true, message: 'ID required' },
-          minLength: { value: 1, message: 'ID must be at least 1 characters' },
+          minLength: {
+            value: 2,
+            message: 'ID must be at least 2 characters',
+          },
         })}
+        error={!!error.id}
+        helperText={error.id?.message}
       />
       <TextField
         {...register('name', {
@@ -68,6 +73,8 @@ const AddUser = () => {
             message: 'name must be at least 3 characters',
           },
         })}
+        error={!!error.name}
+        helperText={error.name?.message}
         id="outlined-basic"
         label="User Name"
         variant="outlined"
@@ -80,6 +87,8 @@ const AddUser = () => {
           required: { value: true, message: 'Age required' },
           min: { value: 4, message: 'Age must be at least 4' },
         })}
+        error={!!error.age}
+        helperText={error.age?.message}
       />
       <Button type="submit" variant="contained">
         {ADD_USER_BUTTON_TEXT}
@@ -87,4 +96,5 @@ const AddUser = () => {
     </Stack>
   );
 };
+
 export default AddUser;
