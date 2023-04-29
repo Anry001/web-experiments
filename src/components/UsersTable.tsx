@@ -4,7 +4,7 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import AddUser from '@components/AddUser';
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 100 },
+  { field: 'id', headerName: 'ID', width: 70 },
   { field: 'name', headerName: 'Name', width: 100, editable: true },
   { field: 'age', headerName: 'Age', width: 50, editable: true },
 ];

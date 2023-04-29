@@ -37,8 +37,6 @@ const AddUser = () => {
     mutate({ id, name, age });
   };
 
-  // console.log('form errores:', error);
-
   return (
     <Stack
       direction="column"
@@ -66,6 +64,9 @@ const AddUser = () => {
         helperText={error.id?.message}
       />
       <TextField
+        id="outlined-basic"
+        label="User Name"
+        variant="outlined"
         {...register('name', {
           required: { value: true, message: 'Name required' },
           minLength: {
@@ -75,9 +76,6 @@ const AddUser = () => {
         })}
         error={!!error.name}
         helperText={error.name?.message}
-        id="outlined-basic"
-        label="User Name"
-        variant="outlined"
       />
       <TextField
         id="outlined-basic"
