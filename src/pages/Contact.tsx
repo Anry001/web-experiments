@@ -12,6 +12,7 @@ const FULL_NAME_TEXT = 'name: john doe';
 const Contact = () => {
   return (
     <Stack
+      sx={{ height: '90vh', width: '100vw' }}
       direction="column"
       justifyContent="center"
       alignItems="center"
@@ -34,7 +35,7 @@ const Contact = () => {
           <Button variant="contained">{BACK_TO_HOME_BUTTON_TEXT}</Button>
         </Link>
       </Box>
-      <Box sx={{ mb: '5px' }}>
+      <Box sx={{ height: '50%', width: '37%' }}>
         <ShitDataGrid />
       </Box>
       <ButtonClicks />

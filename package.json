@@ -19,6 +19,7 @@
     "json-server": "^0.17.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
     "vite-tsconfig-paths": "^4.0.7",
     "zustand": "^4.3.7"
   },

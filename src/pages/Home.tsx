@@ -18,7 +18,7 @@ const Home = () => {
       <Typography sx={{ fontWeight: 'bold' }} variant="h3" gutterBottom>
         {HOME_TEXT}
       </Typography>
-      <Box sx={{ height: '50%', width: '30%' }}>
+      <Box sx={{ height: '50%', width: '37%' }}>
         <UsersTable />
       </Box>
       <Stack
