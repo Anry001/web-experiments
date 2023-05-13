@@ -56,8 +56,8 @@ const AddUser = () => {
         {...register('id', {
           required: { value: true, message: 'ID required' },
           minLength: {
-            value: 2,
-            message: 'ID must be at least 2 characters',
+            value: 1,
+            message: 'ID must be at least 1 characters',
           },
         })}
         error={!!error.id}
